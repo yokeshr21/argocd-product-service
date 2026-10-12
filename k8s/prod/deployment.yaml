@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-product-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: argocd-product
+  template:
+    metadata:
+      labels:
+        app: argocd-product
+    spec:
+      containers:
+        - name: product-service
+          image: yokeshraj23/argocd-product-service:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
