@@ -10,4 +10,4 @@ replicas:
 
 images:
   - name: yokeshraj23/argocd-product-service
-    newTag: "2.0"
+    newTag: "99.0-invalid"
